@@ -25,8 +25,7 @@
     <title>Hidromiel - Bebida Artesanal Tradicional</title>
     <link rel="canonical" href="https://hidromiel.com/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/carrito.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 </head>
 <body>
     <section id="fondo-animado">
@@ -39,80 +38,393 @@
         <!-- Menú deslizante -->
         <nav class="menu-slide">
             <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="puntos-venta.html">Puntos de venta</a></li>
-                <li><a href="quienes-somos.html">Quienes somos</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#puntos-venta">Puntos de Venta</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
 
         <header>
-            <div id="logo">
-                <img id="marca" src="assets/img/logo.png" alt="Logo Hidromiel Artesanal" loading="lazy">
-            </div>
-            <div id="botonera_principal">
-                <button id="carrito-toggle" class="carrito-icon" aria-label="Abrir carrito">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="carrito-contador" class="carrito-badge">0</span>
-                </button>
-                <button id="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="menu">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="puntos-venta.html">Puntos de venta</a></li>
-                    <li><a href="quienes-somos.html">Quienes somos</a></li>
-                </ul>
+            <div>
+                <div id="logo">
+                    <a href="#hero"><img id="marca" src="assets/img/logo.png" alt="Logo Hidromiel Artesanal" loading="lazy"></a>
+                </div>
+                <div id="botonera_principal">
+                    <ul class="menu">
+                        <li><a href="#hero">Inicio</a></li>
+                        <li><a href="#historia">Historia</a></li>
+                        <li><a href="#proceso">Proceso</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#beneficios">Beneficios</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#puntos-venta">Puntos de Venta</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                    <button id="carrito-toggle" class="carrito-icon" aria-label="Abrir carrito">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="carrito-contador" class="carrito-badge">0</span>
+                    </button>
+                    <button id="menu-toggle" aria-label="Menú de navegación" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </header>
 
         <main>
-            <section id="contenido_principal">
-                <div id="imagen1" role="img" aria-label="Hidromiel artesanal"></div>
-                <article id="presentacion">
-                    <h1 class="tipografia_presentacion">Hidromiel</h1>
-                    <p class="tipografia_presentacion">Se considera que es la primera de las bebidas alcohólicas que consumió el ser humano y se cree que es precursora de la cerveza. El hidromiel es una bebida histórica cuya preparación se fundamenta en la fermentación de una mezcla de agua y miel, que alcanza cierta graduación alcohólica que varía según la relación de miel/agua y la tolerancia de las levaduras al alcohol. Su uso fue fuertemente difundido por los pueblos de la antigüedad.</p>
-                </article>
-                <article id="texto_contenido">
-                    Desde su origen, ha sido consumido en todas las civilizaciones antiguas del mundo, en los cuatro continentes. En África, por distintas tribus; Asia, por la hindú; en América, por la civilización maya; y en toda Europa, por la griega, la romana, la celta, la normanda, la sajona y la vikinga.
-                </article>
-                <div id="imagen2">
-                    <video width="440" height="300" autoplay loop muted playsinline>
-                        <source src="assets/video/Wine Pouring in Glass in Napa or Sonoma 1.mp4" type="video/mp4" />
-                        Tu navegador no soporta el elemento de video.
-                    </video>
+            <!-- HERO SECTION -->
+            <section id="hero" class="hero-section-full">
+                <div class="hero-background">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title">El Elixir de los Dioses</h1>
+                        <p class="hero-subtitle">La primera bebida que la humanidad conoció</p>
+                        <p class="hero-description">Imagina beber de la misma copa que los vikingos, los griegos y los mayas. El hidromiel no es solo una bebida: es un viaje a través del tiempo, un legado ancestral que hemos rescatado para ti. Cada sorbo es un encuentro con la historia, cada botella, una obra de arte artesanal.</p>
+                        <a href="#productos" class="hero-cta">Descubre Nuestros Productos</a>
+                    </div>
                 </div>
-                <article id="frase_importante">
-                    <p>Se destaca por ser una bebida refrescante, digestiva y relajante, es revitalizante y energética además de tener propiedades enzimáticas que le confiere la fermentación convirtiéndola en un producto altamente nutritivo.</p>
-                </article>
-                <aside id="imagenaside" role="img" aria-label="Proceso de elaboración de hidromiel"></aside>
+            </section>
+
+            <!-- HISTORIA SECTION -->
+            <section id="historia" class="historia-section-full">
+                <div class="historia-container">
+                    <div class="historia-content">
+                        <h2 class="section-title">Un Legado que Trasciende Continentes</h2>
+                        <p>Desde los primeros días de la humanidad, el hidromiel ha sido el compañero fiel de reyes y guerreros, poetas y sabios. Los vikingos lo llamaban "néctar de los dioses" y lo compartían en sus grandes festines. Los griegos lo ofrecían a sus deidades. Los mayas lo consideraban sagrado. Y hoy, nosotros lo traemos de vuelta a tu mesa, con el mismo respeto y pasión que nuestros ancestros.</p>
+                    </div>
+                    <div class="historia-media">
+                        <video autoplay loop muted playsinline>
+                            <source src="assets/video/Wine Pouring in Glass in Napa or Sonoma 1.mp4" type="video/mp4" />
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROCESO SECTION -->
+            <section id="proceso" class="proceso-section-full">
+                <div class="proceso-background">
+                    <div class="proceso-overlay">
+                        <h2 class="section-title">Elaborado con Pasión y Tiempo</h2>
+                        <p>En cada gota de nuestro hidromiel hay horas de cuidado, días de fermentación paciente y el amor de quienes creemos que las cosas bien hechas valen la pena. No hay prisa, solo dedicación. No hay atajos, solo tradición.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUCTOS SECTION -->
+            <section id="productos" class="productos-section-full productos">
+                <div class="productos-container">
+                    <div class="page-nav">
+                        <div class="title-decoration"></div>
+                        <h2>Nuestros Productos</h2>
+                        <p class="title-subtitle">Cada botella es una historia, cada sorbo una experiencia</p>
+                        <div class="title-decoration"></div>
+                    </div>
+                    <div class="page-content">
+                        <article class="product-container accordion" 
+                                 data-producto-id="hidromiel-tradicional"
+                                 data-producto-nombre="Hidromiel Tradicional"
+                                 data-producto-precio="800"
+                                 data-producto-imagen="assets/img/hidromiel tradicional.jpg">
+                            <div class="product-header" onclick="toggleAccordion(this)">
+                                <div class="product-image-wrapper">
+                                    <img src="assets/img/hidromiel tradicional.jpg" alt="Hidromiel Tradicional - Bebida artesanal de miel fermentada" loading="lazy" />
+                                </div>
+                                <div class="product-title-wrapper">
+                                    <h3>Hidromiel Tradicional</h3>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <p class="product-description">La esencia pura de la tradición. Nuestro hidromiel clásico, elaborado con miel selecta y fermentación lenta que captura el sabor auténtico que disfrutaron vikingos y reyes. Suave, dorado y lleno de historia en cada sorbo.</p>
+                                <button class="button-add" data-action="agregar-carrito" aria-label="Agregar Hidromiel Tradicional al carrito">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-container accordion"
+                                 data-producto-id="melomiel"
+                                 data-producto-nombre="Melomiel"
+                                 data-producto-precio="800"
+                                 data-producto-imagen="assets/img/melomel-de-frambuesas.jpg.webp">
+                            <div class="product-header" onclick="toggleAccordion(this)">
+                                <div class="product-image-wrapper">
+                                    <img src="assets/img/melomel-de-frambuesas.jpg.webp" alt="Melomiel de frambuesas - Hidromiel con frutas" loading="lazy" />
+                                </div>
+                                <div class="product-title-wrapper">
+                                    <h3>Melomiel</h3>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <p class="product-description">Frambuesas frescas se encuentran con la miel en esta deliciosa variante. El Melomiel es una celebración de la naturaleza: dulce pero equilibrado, frutal pero elegante. Una explosión de sabor que alegra cualquier ocasión.</p>
+                                <button class="button-add" data-action="agregar-carrito" aria-label="Agregar Melomiel al carrito">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </article>
+                        <article class="product-container accordion"
+                                 data-producto-id="metheglin"
+                                 data-producto-nombre="Metheglin"
+                                 data-producto-precio="800"
+                                 data-producto-imagen="assets/img/metheglin.jpg">
+                            <div class="product-header" onclick="toggleAccordion(this)">
+                                <div class="product-image-wrapper">
+                                    <img src="assets/img/metheglin.jpg" alt="Metheglin - Hidromiel con especias y hierbas" loading="lazy" />
+                                </div>
+                                <div class="product-title-wrapper">
+                                    <h3>Metheglin</h3>
+                                    <i class="fas fa-chevron-down accordion-icon"></i>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <p class="product-description">Especias cuidadosamente seleccionadas danzan con la miel en esta creación aromática. Canela, clavo y otras hierbas secretas crean un perfil sensorial único. El Metheglin es para los aventureros del paladar que buscan algo verdaderamente especial.</p>
+                                <button class="button-add" data-action="agregar-carrito" aria-label="Agregar Metheglin al carrito">
+                                    <i class="fas fa-shopping-cart"></i> Comprar
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BENEFICIOS SECTION -->
+            <section id="beneficios" class="beneficios-section-full">
+                <div class="beneficios-container">
+                    <h2 class="section-title">Más que una Bebida, una Experiencia</h2>
+                    <p class="beneficios-intro">Nuestro hidromiel no solo deleita el paladar: es refrescante como una brisa de verano, digestivo como un elixir milenario, y relajante como un atardecer dorado. La fermentación natural le confiere propiedades enzimáticas únicas, convirtiéndolo en una bebida no solo deliciosa, sino también nutritiva y energética. Cada botella es un tesoro de bienestar.</p>
+                    <div class="beneficios-grid">
+                        <div class="beneficio-card">
+                            <i class="fas fa-snowflake fa-3x"></i>
+                            <h3>Refrescante</h3>
+                            <p>Ideal para disfrutar en cualquier momento del día, especialmente en días cálidos.</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <i class="fas fa-heart fa-3x"></i>
+                            <h3>Digestivo</h3>
+                            <p>Las enzimas naturales de la miel fermentada ayudan a la digestión.</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <i class="fas fa-moon fa-3x"></i>
+                            <h3>Relajante</h3>
+                            <p>Perfecto para acompañar momentos de tranquilidad y relajación.</p>
+                        </div>
+                        <div class="beneficio-card">
+                            <i class="fas fa-bolt fa-3x"></i>
+                            <h3>Energético</h3>
+                            <p>Proporciona energía natural gracias a los azúcares de la miel.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NOSOTROS SECTION -->
+            <section id="nosotros" class="nosotros-section-full">
+                <div class="nosotros-hero">
+                    <h2>El Corazón Detrás de Cada Botella</h2>
+                    <p class="hero-quote">"No hacemos hidromiel. Cuidamos un legado, honramos una tradición, compartimos un sueño."</p>
+                </div>
+                <div class="nosotros-historia">
+                    <div class="historia-content">
+                        <div class="historia-text">
+                            <h3>Nuestra Historia</h3>
+                            <p>Todo comenzó con una pregunta: ¿qué pasaría si rescatáramos la bebida más antigua de la humanidad y la hiciéramos con el mismo amor que nuestros ancestros?</p>
+                            <p>Somos un grupo de apasionados que decidimos que el tiempo no debía olvidar esta joya dorada. Cada mañana, cuando el sol ilumina nuestros barriles, recordamos que no estamos solo fermentando miel y agua. Estamos preservando magia.</p>
+                            <p>En cada botella hay horas de observación paciente, días de espera respetuosa, y el compromiso inquebrantable de hacer las cosas bien, sin atajos, sin prisas. Porque el hidromiel, como el amor, necesita tiempo para florecer.</p>
+                        </div>
+                        <div class="historia-image">
+                            <img src="assets/img/fabrica.jpeg" alt="Nuestra fábrica de hidromiel artesanal - Proceso de elaboración tradicional" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-valores">
+                    <h3 class="valores-title">Lo que Nos Mueve</h3>
+                    <div class="valores-grid">
+                        <div class="valor-card">
+                            <i class="fas fa-heart fa-3x"></i>
+                            <h4>Pasión</h4>
+                            <p>No es solo un trabajo. Es nuestra forma de conectar con la historia, de honrar a quienes vinieron antes y de crear algo hermoso para quienes vendrán después.</p>
+                        </div>
+                        <div class="valor-card">
+                            <i class="fas fa-seedling fa-3x"></i>
+                            <h4>Tradición</h4>
+                            <p>Respetamos los métodos ancestrales porque sabemos que la sabiduría de siglos no se mejora con prisas. Cada proceso es un ritual, cada botella, un tributo.</p>
+                        </div>
+                        <div class="valor-card">
+                            <i class="fas fa-hand-holding-heart fa-3x"></i>
+                            <h4>Dedicación</h4>
+                            <p>Revisamos cada lote con la atención de un artesano. No hay producción en masa aquí, solo cuidado meticuloso y amor por el detalle que hace la diferencia.</p>
+                        </div>
+                        <div class="valor-card">
+                            <i class="fas fa-users fa-3x"></i>
+                            <h4>Comunidad</h4>
+                            <p>Cada persona que prueba nuestro hidromiel se convierte en parte de nuestra familia. Compartimos no solo una bebida, sino una experiencia, una historia, un momento.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nosotros-mision">
+                    <div class="mision-content">
+                        <h3>Nuestra Promesa</h3>
+                        <p class="mision-text">En cada gota de nuestro hidromiel hay una promesa: la de nunca comprometer la calidad por la cantidad, la de mantener viva una tradición milenaria, y la de compartir contigo algo que hacemos con las manos, el corazón y el alma.</p>
+                        <p class="mision-text">Cuando abres una de nuestras botellas, no estás solo bebiendo hidromiel. Estás bebiendo historia, pasión, dedicación y, sobre todo, amor. Porque eso es lo que somos: artesanos que aman lo que hacen y hacen lo que aman.</p>
+                        <div class="mision-signature">
+                            <p class="signature-text">Con todo nuestro cariño,</p>
+                            <p class="signature-name">El Equipo de Hidromiel Artesanal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PUNTOS DE VENTA SECTION -->
+            <section id="puntos-venta" class="puntos-venta-section-full">
+                <div class="venta-hero">
+                    <h2>Encuentra tu Hidromiel</h2>
+                    <p class="hero-subtitle">Cada botella tiene una historia. Encuentra la tuya cerca de casa.</p>
+                </div>
+                <div class="venta-content">
+                    <div class="intro-card">
+                        <i class="fas fa-map-marked-alt fa-3x"></i>
+                        <h3>Un Tesoro en Cada Esquina</h3>
+                        <p>Nuestro hidromiel viaja desde nuestra fábrica artesanal hasta tiendas selectas que comparten nuestra pasión por la calidad. Cada punto de venta ha sido elegido con cuidado, porque creemos que el lugar donde encuentras tu hidromiel es parte de la experiencia.</p>
+                    </div>
+                    <div class="venta-tips">
+                        <h3 class="section-title">¿Cómo Encontrar tu Punto de Venta Ideal?</h3>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-number">1</div>
+                                <h4>Explora el Mapa</h4>
+                                <p>Navega por nuestro mapa interactivo y descubre los puntos de venta más cercanos a ti. Cada marcador es una puerta a una nueva experiencia.</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-number">2</div>
+                                <h4>Llama Antes de Ir</h4>
+                                <p>Recomendamos contactar al punto de venta para confirmar disponibilidad. Así te aseguras de encontrar exactamente lo que buscas.</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-number">3</div>
+                                <h4>Disfruta la Experiencia</h4>
+                                <p>Cada tienda tiene su propio encanto. Tómate tu tiempo, pregunta, prueba. El hidromiel se disfruta mejor cuando se comparte.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mapa-section">
+                        <h3 class="mapa-title">Nuestros Puntos de Venta</h3>
+                        <div class="mapa-wrapper">
+                            <iframe id="main-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13130.976496924179!2d-58.60366821923307!3d-34.635905922844294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc78273397ab1%3A0x5093683b11b0c457!2sHaedo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1621258067875!5m2!1ses!2sar" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy" title="Mapa de puntos de venta"></iframe>
+                        </div>
+                    </div>
+                    <div class="venta-cta">
+                        <div class="cta-content">
+                            <h3>¿No Encuentras un Punto Cerca?</h3>
+                            <p>No te preocupes. Estamos expandiendo nuestra red constantemente. Mientras tanto, puedes contactarnos directamente y te ayudamos a conseguir tu hidromiel favorito.</p>
+                            <a href="#contacto" class="cta-button">
+                                <i class="fas fa-envelope"></i> Contáctanos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACTO SECTION -->
+            <section id="contacto" class="contacto-section-full">
+                <div class="contacto-hero">
+                    <h2>Hablemos de Hidromiel</h2>
+                    <p class="hero-text">Cada pregunta es una oportunidad de compartir nuestra pasión. Estamos aquí para ti, siempre.</p>
+                </div>
+                <div class="contacto-content">
+                    <div class="contacto-info">
+                        <div class="info-card">
+                            <i class="fas fa-envelope fa-2x"></i>
+                            <h3>Escríbenos</h3>
+                            <p>¿Tienes dudas sobre nuestros productos? ¿Quieres conocer más sobre el proceso de elaboración? Estamos a un mensaje de distancia.</p>
+                            <p class="info-email">beer@gmail.com</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-phone fa-2x"></i>
+                            <h3>Llámanos</h3>
+                            <p>Prefieres hablar directamente? Nuestro equipo está disponible para atenderte y resolver todas tus consultas.</p>
+                            <p class="info-phone">15-1111-1111</p>
+                        </div>
+                        <div class="info-card">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <h3>Visítanos</h3>
+                            <p>¿Te gustaría conocer nuestro proceso artesanal? Agendamos visitas guiadas para que vivas la experiencia completa.</p>
+                            <p class="info-address">Haedo, Buenos Aires</p>
+                        </div>
+                    </div>
+                    <div id="caja-formulario">
+                        <h3>Envíanos tu Mensaje</h3>
+                        <p class="form-intro">Completa el formulario y te responderemos a la brevedad. Tu opinión y consultas son muy importantes para nosotros.</p>
+                        <form id="formulario-contacto" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido"><i class="fas fa-user"></i> Apellido:</label>
+                                    <input type="text" id="apellido" name="apellido" required placeholder="Tu apellido">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="motivo"><i class="fas fa-tag"></i> Motivo de consulta:</label>
+                                <select name="motivo" id="motivo" required>
+                                    <option value="">Seleccione un motivo</option>
+                                    <option value="Trabaja con nosotros">Trabaja con nosotros</option>
+                                    <option value="Sobre nuestros productos">Sobre nuestros productos</option>
+                                    <option value="Quiero vender sus productos">Quiero vender sus productos</option>
+                                    <option value="Quiero visitar la fabrica">Quiero visitar la fábrica</option>
+                                    <option value="Compra">Compra</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
+                                <textarea name="mensaje" id="mensaje" cols="40" rows="10" required placeholder="Cuéntanos qué te gustaría saber o cómo podemos ayudarte..."></textarea>
+                            </div>
+                            <div class="button-group">
+                                <input type="submit" value="Enviar Mensaje">
+                                <input type="reset" value="Limpiar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer>
-            <div id="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13129.332930759756!2d-58.60838890709929!3d-34.64628638437906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc78273397ab1%3A0x5093683b11b0c457!2sHaedo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1619642941759!5m2!1ses!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación en Haedo, Buenos Aires"></iframe>
-            </div>
-            <div id="datos">
-                <p>Argentina, Buenos Aires, Haedo</p>
-                <p>Dirección: Calle Falsa 123</p>
-                <p>Teléfono: 15-1111-1111</p>
-                <p>E-Mail: beer@gmail.com</p>
-            </div>
-            <div id="redes">
-                <ul class="RedesSociales">
-                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square fa-lg"></i></a></li>
-                    <li><a href="https://twitter.com/?lang=es" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square fa-lg"></i></a></li>
-                    <li><a href="https://www.youtube.com/" title="Youtube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube-square fa-lg"></i></a></li>
-                    <li><a href="https://web.whatsapp.com/" title="Whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp-square fa-lg"></i></a></li>
-                    <li><a href="https://www.instagram.com/?hl=es-la" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram-square fa-lg"></i></a></li>
-                </ul>
-                <div id="MielCayendo" role="img" aria-label="Animación de miel"></div>
+            <div>
+                <div id="mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13129.332930759756!2d-58.60838890709929!3d-34.64628638437906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc78273397ab1%3A0x5093683b11b0c457!2sHaedo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1619642941759!5m2!1ses!2sar" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación en Haedo, Buenos Aires"></iframe>
+                </div>
+                <div id="datos">
+                    <p>Argentina, Buenos Aires, Haedo</p>
+                    <p>Dirección: Calle Falsa 123</p>
+                    <p>Teléfono: 15-1111-1111</p>
+                    <p>E-Mail: beer@gmail.com</p>
+                </div>
+                <div id="redes">
+                    <h3>Síguenos</h3>
+                    <ul class="RedesSociales">
+                        <li><a href="https://www.facebook.com/" title="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://twitter.com/?lang=es" title="Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.youtube.com/" title="Youtube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://web.whatsapp.com/" title="Whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/?hl=es-la" title="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <div id="MielCayendo" role="img" aria-label="Animación de miel"></div>
+                </div>
             </div>
         </footer>
     </section>
@@ -159,5 +471,8 @@
 
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/carrito.js"></script>
+    <script src="assets/js/productos.js"></script>
+    <script src="assets/js/formulario.js"></script>
+    <script src="assets/js/onepage.js"></script>
 </body>
 </html>

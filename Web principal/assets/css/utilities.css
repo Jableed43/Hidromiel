@@ -1,0 +1,43 @@
+/* Importar variables */
+@import url('variables.css');
+
+/* ============================================
+   CLASES UTILITARIAS - CARDS
+   ============================================ */
+
+.card-base {
+    background: var(--bg-card-light);
+    border: var(--border-card);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-fast);
+}
+
+.card-subtle {
+    background: var(--bg-card-subtle);
+    border: var(--border-card);
+    border-radius: var(--border-radius-card);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-lg);
+    transition: all var(--transition-fast);
+}
+
+.card-large {
+    background: var(--bg-card-light);
+    border: var(--border-card);
+    border-radius: var(--border-radius-card-large);
+    box-shadow: var(--shadow-md);
+    padding: var(--spacing-xl);
+    transition: all var(--transition-fast);
+}
+
+.card-hover {
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+

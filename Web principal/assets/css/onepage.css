@@ -1,0 +1,420 @@
+/* Importar variables */
+@import url('variables.css');
+
+/* ============================================
+   ONE PAGE STYLES
+   ============================================ */
+
+/* Scroll suave global */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Secciones full-width */
+section[id] {
+    scroll-margin-top: 80px; /* Offset para header sticky */
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero-section-full {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/miel cayendo.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* Fallback si la imagen no carga */
+.hero-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+    z-index: -1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(138, 110, 29, 0.85) 0%, rgba(191, 137, 38, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width-content);
+    width: 100%;
+    padding: var(--spacing-xl);
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-primary);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-family: var(--font-secondary);
+}
+
+.hero-description {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.hero-cta {
+    display: inline-block;
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: var(--color-accent);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: var(--font-size-large);
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-cta:hover {
+    background-color: var(--color-accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   HISTORIA SECTION
+   ============================================ */
+.historia-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: var(--spacing-lg) auto;
+    max-width: var(--max-width-content);
+    box-shadow: var(--shadow-md);
+}
+
+.historia-container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.historia-content {
+    padding: var(--spacing-lg);
+}
+
+.historia-content h2 {
+    color: var(--color-text-default);
+    margin-bottom: var(--spacing-md);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.historia-content p {
+    color: var(--color-text-default);
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-md);
+}
+
+.historia-section-full .section-title {
+    color: var(--color-text-default);
+}
+
+.historia-media {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.historia-media video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============================================
+   PROCESO SECTION
+   ============================================ */
+.proceso-section-full {
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.proceso-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/aside.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.proceso-section-full .proceso-overlay {
+    position: relative;
+    z-index: 1;
+    max-width: var(--max-width-content);
+    width: 100%;
+    background: #ffffff;
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    text-align: center;
+    color: var(--color-text-default);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--color-accent);
+}
+
+.proceso-section-full .proceso-overlay h2 {
+    color: var(--color-text-default);
+    margin-bottom: var(--spacing-md);
+}
+
+.proceso-section-full .proceso-overlay p {
+    color: var(--color-text-default);
+    font-size: var(--font-size-large);
+    line-height: 1.8;
+}
+
+/* ============================================
+   PRODUCTOS SECTION
+   ============================================ */
+.productos-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: transparent;
+}
+
+.productos-container {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+/* ============================================
+   BENEFICIOS SECTION
+   ============================================ */
+.beneficios-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background: #ffffff;
+    color: var(--color-text-default);
+    border-radius: 12px;
+    margin: var(--spacing-lg) auto;
+    max-width: var(--max-width-container);
+    box-shadow: var(--shadow-md);
+    border: 2px solid var(--color-accent);
+}
+
+.beneficios-container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.beneficios-container .section-title {
+    color: var(--color-text-default);
+    margin-bottom: var(--spacing-md);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.beneficios-intro {
+    font-size: var(--font-size-large);
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xl);
+    color: var(--color-text-default);
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.beneficio-card {
+    background: #f5f5f5;
+    padding: var(--spacing-lg);
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+    transition: all var(--transition-fast);
+}
+
+.beneficio-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.beneficio-card i {
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-md);
+}
+
+.beneficio-card h3 {
+    color: var(--color-text-default);
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-large);
+}
+
+.beneficio-card p {
+    color: var(--color-text-default);
+    line-height: 1.6;
+}
+
+/* ============================================
+   NOSOTROS SECTION
+   ============================================ */
+.nosotros-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: var(--spacing-lg) auto;
+    max-width: var(--max-width-content);
+    box-shadow: var(--shadow-md);
+}
+
+.nosotros-hero {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.nosotros-hero h2 {
+    color: var(--color-text-default);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-quote {
+    font-size: var(--font-size-large);
+    font-style: italic;
+    color: var(--color-accent);
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nosotros-historia {
+    max-width: var(--max-width-content);
+    margin: var(--spacing-xl) auto;
+}
+
+.nosotros-valores {
+    max-width: var(--max-width-container);
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-xl) 0;
+}
+
+.nosotros-mision {
+    max-width: var(--max-width-content);
+    margin: var(--spacing-xl) auto;
+    padding: var(--spacing-xl);
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
+/* ============================================
+   PUNTOS DE VENTA SECTION
+   ============================================ */
+.puntos-venta-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: var(--spacing-lg) auto;
+    max-width: var(--max-width-content);
+    box-shadow: var(--shadow-md);
+}
+
+.venta-hero {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.venta-hero h2 {
+    color: var(--color-text-default);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+}
+
+.venta-content {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+/* ============================================
+   CONTACTO SECTION
+   ============================================ */
+.contacto-section-full {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: var(--spacing-lg) auto;
+    max-width: var(--max-width-content);
+    box-shadow: var(--shadow-md);
+}
+
+.contacto-hero {
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+.contacto-hero h2 {
+    color: var(--color-text-default);
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    margin-bottom: var(--spacing-md);
+}
+
+.contacto-content {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+
+

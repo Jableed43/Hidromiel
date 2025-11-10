@@ -4,11 +4,28 @@
  * para agregarlo al carrito
  */
 
+// Función para toggle del acordeón
+function toggleAccordion(header) {
+    const container = header.closest('.product-container');
+    const isActive = container.classList.contains('active');
+    
+    // Cerrar todos los acordeones
+    document.querySelectorAll('.product-container.accordion').forEach(acc => {
+        acc.classList.remove('active');
+    });
+    
+    // Abrir el acordeón clickeado si no estaba activo
+    if (!isActive) {
+        container.classList.add('active');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const botonesAgregar = document.querySelectorAll('[data-action="agregar-carrito"]');
     
     botonesAgregar.forEach(boton => {
-        boton.addEventListener('click', function() {
+        boton.addEventListener('click', function(e) {
+            e.stopPropagation(); // Evitar que se cierre el acordeón al hacer click en el botón
             const container = this.closest('.product-container');
             
             if (!container) return;

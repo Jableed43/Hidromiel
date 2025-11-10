@@ -1,0 +1,25 @@
+/* ============================================
+   ARCHIVO MAESTRO CSS
+   Importa todos los estilos en orden correcto
+   ============================================ */
+
+/* 1. Variables primero */
+@import url('variables.css');
+
+/* 2. Utilidades */
+@import url('utilities.css');
+
+/* 3. Base y reset */
+@import url('main.css');
+
+/* 4. Componentes específicos */
+@import url('onepage.css');
+@import url('productos.css');
+@import url('formulario.css');
+@import url('quienes-somos.css');
+@import url('puntos-venta.css');
+@import url('carrito.css');
+
+/* 5. Responsive al final */
+@import url('responsive.css');
+

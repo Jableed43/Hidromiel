@@ -12,11 +12,16 @@
     --color-text-primary: #ffffff;
     --color-text-secondary: #808080;
     --color-text-dark: #000000;
+    --color-text-default: #241f1f;
     
     /* Colores de fondo */
     --bg-primary: #F9C941;
     --bg-secondary: rgb(191, 137, 38);
     --bg-dark: #000000;
+    --bg-card-light: #ffffff;
+    --bg-card-subtle: #f5f5f5;
+    --bg-body-gradient: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 25%, #f0f0f0 50%, #e8e8e8 75%, #f5f5f5 100%);
+    --header-bg: #f9c941;
     
     /* Tipografía */
     --font-primary: 'TheValentine', serif;
@@ -57,5 +62,10 @@
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    /* Bordes */
+    --border-card: 2px solid var(--color-accent);
+    --border-radius-card: 12px;
+    --border-radius-card-large: 16px;
 }
 

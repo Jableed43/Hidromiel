@@ -1,0 +1,571 @@
+/* Importar variables */
+@import url('variables.css');
+
+/* ============================================
+   MEDIA QUERIES CENTRALIZADAS
+   ============================================ */
+
+/* ============================================
+   TABLET (max-width: 992px)
+   ============================================ */
+@media (max-width: 992px) {
+    /* Header */
+    header > div {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    #logo {
+        width: 100%;
+        height: 60px;
+        justify-content: center;
+    }
+
+    #botonera_principal {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        padding-top: var(--spacing-sm);
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .menu li a {
+        padding: var(--spacing-sm) var(--spacing-sm);
+        font-size: var(--font-size-base);
+    }
+
+    /* Contenido principal */
+    section#contenido_principal {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    /* Footer */
+    footer > div {
+        grid-template-columns: 1fr;
+    }
+
+    /* Menú slide - ocultar en tablet/desktop */
+    #menu-slide-trigger {
+        display: none;
+    }
+
+    .menu-slide {
+        display: none;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
+
+    /* Historia section */
+    .historia-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .historia-media {
+        order: -1;
+    }
+    
+    /* Grids - mantener en fila */
+    .beneficios-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .valores-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .tips-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contacto-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ============================================
+   MOBILE (max-width: 768px)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Body */
+    body {
+        font-size: var(--font-size-base);
+    }
+
+    /* Header */
+    header > div {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    #logo {
+        height: 50px;
+    }
+
+    #logo img#marca {
+        max-width: 150px;
+        max-height: 50px;
+    }
+
+    /* Menú hamburguesa - ocultar */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Menú slide - mostrar en móvil */
+    #menu-slide-trigger {
+        display: flex;
+        height: 80px;
+        width: 8px;
+    }
+
+    #menu-slide-trigger:hover {
+        width: 50px;
+    }
+
+    .menu-slide {
+        display: flex;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .menu-overlay {
+        display: block;
+    }
+
+    /* Ocultar menú del header en móvil */
+    #botonera_principal {
+        display: none;
+    }
+
+    header {
+        height: auto;
+        min-height: 60px;
+    }
+
+    #logo {
+        width: 100%;
+        height: 50px;
+        display: flex;
+    }
+
+    /* Contenido principal */
+    section#contenido_principal {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-sm);
+    }
+
+    #imagen1,
+    #presentacion,
+    #texto_contenido,
+    #imagen2,
+    #frase_importante {
+        min-height: 250px;
+    }
+
+    /* Hero section */
+    .hero-section-full {
+        min-height: 80vh;
+    }
+    
+    .hero-content {
+        padding: var(--spacing-lg);
+    }
+    
+    /* Grids - apilar en móvil */
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contacto-info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    /* Scroll offset */
+    section[id] {
+        scroll-margin-top: 60px;
+    }
+
+    /* Productos */
+    .productos {
+        padding: var(--spacing-sm);
+    }
+
+    .productos .page-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .productos .product-container {
+        max-width: 100%;
+    }
+
+    .productos .product-container img {
+        height: 200px;
+    }
+
+    /* Puntos de venta */
+    .venta-hero {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .puntos-venta h1.puntoVenta {
+        font-size: var(--font-size-h2);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .intro-card {
+        padding: var(--spacing-lg);
+    }
+
+    .intro-card h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .section-title {
+        font-size: var(--font-size-h3);
+    }
+
+    .mapa-title {
+        font-size: var(--font-size-h3);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 400px;
+    }
+
+    .venta-cta {
+        padding: var(--spacing-lg);
+    }
+
+    .cta-content h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    /* Contacto */
+    .contacto-hero {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+
+    .contacto-hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .hero-text {
+        font-size: var(--font-size-base);
+    }
+
+    .contacto-info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    #caja-formulario {
+        margin: var(--spacing-sm) auto;
+        padding: var(--spacing-lg);
+        min-height: auto;
+    }
+
+    #caja-formulario h2 {
+        font-size: var(--font-size-h3);
+        margin-bottom: var(--spacing-sm);
+    }
+
+    #caja-formulario form {
+        gap: var(--spacing-sm);
+        max-width: 100%;
+    }
+
+    #caja-formulario .button-group {
+        flex-direction: column;
+    }
+
+    #caja-formulario input[type="submit"],
+    #caja-formulario input[type="reset"] {
+        width: 100%;
+    }
+
+    /* Quienes somos */
+    main.quienes-somos {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-lg);
+    }
+
+    .quienes-hero {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .quienes-hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .hero-quote {
+        font-size: var(--font-size-base);
+    }
+
+    .historia-text {
+        padding: var(--spacing-lg);
+    }
+
+    .historia-text h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .historia-text p {
+        font-size: var(--font-size-base);
+    }
+
+    .valores-title {
+        font-size: var(--font-size-h3);
+    }
+
+    .valor-card {
+        padding: var(--spacing-lg);
+    }
+
+    /* Secciones one-page */
+    .historia-section-full,
+    .proceso-section-full,
+    .productos-section-full,
+    .beneficios-section-full,
+    .nosotros-section-full,
+    .puntos-venta-section-full,
+    .contacto-section-full {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    /* Contenido principal */
+    #imagenaside {
+        min-height: 150px;
+    }
+
+    footer {
+        padding: var(--spacing-sm);
+    }
+
+    #mapa,
+    #datos,
+    #redes {
+        min-height: 200px;
+    }
+
+    .RedesSociales {
+        gap: var(--spacing-xs);
+    }
+
+    .RedesSociales a i {
+        font-size: 1.2rem;
+    }
+
+    /* Formulario */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    #caja-formulario {
+        padding: var(--spacing-lg);
+    }
+
+    #caja-formulario form {
+        max-width: 100%;
+    }
+
+    /* Puntos de venta */
+    .puntos-venta {
+        padding: var(--spacing-sm);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 500px;
+    }
+
+    /* Quienes somos */
+    main.quienes-somos {
+        padding: var(--spacing-sm);
+        gap: var(--spacing-lg);
+    }
+
+    .quienes-hero {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .quienes-hero h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .hero-quote {
+        font-size: var(--font-size-base);
+    }
+
+    .historia-content {
+        grid-template-columns: 1fr;
+    }
+
+    .historia-text {
+        padding: var(--spacing-lg);
+    }
+
+    .historia-text h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .historia-text p {
+        font-size: var(--font-size-base);
+    }
+
+    .valores-title {
+        font-size: var(--font-size-h3);
+    }
+
+    .valor-card {
+        padding: var(--spacing-lg);
+    }
+
+    .mision-content h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    .mision-text {
+        font-size: var(--font-size-base);
+    }
+
+    /* Carrito */
+    .carrito-panel {
+        max-width: 100%;
+    }
+    
+    .carrito-item {
+        flex-wrap: wrap;
+    }
+    
+    .carrito-item-info {
+        flex-basis: 100%;
+    }
+    
+    .carrito-item-controls {
+        order: 3;
+    }
+    
+    .carrito-item-total {
+        order: 4;
+        flex-basis: 100%;
+        text-align: left;
+        margin-top: var(--spacing-xs);
+    }
+    
+    .btn-eliminar {
+        order: 5;
+    }
+    
+    .toast-container {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+    
+    .toast {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* ============================================
+   MOBILE PEQUEÑO (max-width: 480px)
+   ============================================ */
+@media (max-width: 480px) {
+    .productos .page-nav h1 {
+        font-size: var(--font-size-h2);
+    }
+
+    .productos .product-container img {
+        height: 180px;
+    }
+
+    .puntos-venta {
+        padding: var(--spacing-xs);
+    }
+
+    .puntos-venta h1.puntoVenta {
+        font-size: var(--font-size-h3);
+    }
+
+    .intro-card {
+        padding: var(--spacing-md);
+    }
+
+    .tip-card {
+        padding: var(--spacing-md);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 300px;
+    }
+
+    /* Contenido principal */
+    #imagen1,
+    #presentacion,
+    #texto_contenido,
+    #imagen2,
+    #frase_importante {
+        min-height: 200px;
+    }
+
+    .tipografia_presentacion {
+        font-size: var(--font-size-large);
+    }
+
+    #texto_contenido {
+        font-size: var(--font-size-base);
+    }
+
+    /* Formulario */
+    .contacto-hero {
+        padding: var(--spacing-md) var(--spacing-xs);
+    }
+
+    .contacto-hero h1 {
+        font-size: var(--font-size-h3);
+    }
+
+    #caja-formulario {
+        padding: var(--spacing-md);
+    }
+
+    #caja-formulario h2 {
+        font-size: var(--font-size-h3);
+    }
+
+    /* Quienes somos */
+    main.quienes-somos {
+        padding: var(--spacing-xs);
+    }
+
+    .quienes-hero h1 {
+        font-size: var(--font-size-h3);
+    }
+
+    .historia-text {
+        padding: var(--spacing-md);
+    }
+}
+
