@@ -1,0 +1,158 @@
+/* Importar variables */
+@import url('variables.css');
+
+@font-face {
+    src: url(../fonts/TheValentine.ttf);
+    font-family: TheValentine;
+}
+
+#caja-formulario {
+    width: 100%;
+    max-width: var(--max-width-content);
+    min-height: 600px;
+    background-color: var(--color-primary);
+    margin: var(--spacing-md) auto;
+    padding: var(--spacing-lg);
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+}
+
+#caja-formulario h1 {
+    text-align: center;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-lg);
+    font-size: var(--font-size-h1);
+}
+
+#caja-formulario form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+#caja-formulario label {
+    color: var(--color-text-primary);
+    font-weight: bold;
+    font-size: var(--font-size-base);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+#caja-formulario input[type="text"],
+#caja-formulario input[type="email"],
+#caja-formulario select,
+#caja-formulario textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--color-accent);
+    border-radius: 4px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-secondary);
+    transition: border-color var(--transition-fast);
+}
+
+#caja-formulario input[type="text"]:focus,
+#caja-formulario input[type="email"]:focus,
+#caja-formulario select:focus,
+#caja-formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-dark);
+    box-shadow: 0 0 0 3px rgba(252, 186, 3, 0.2);
+}
+
+#caja-formulario textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: var(--font-secondary);
+}
+
+#caja-formulario input[type="submit"],
+#caja-formulario input[type="reset"] {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: var(--color-accent);
+    color: var(--color-text-primary);
+    border: none;
+    border-radius: 4px;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    font-family: var(--font-secondary);
+}
+
+#caja-formulario input[type="submit"] {
+    background-color: var(--color-accent);
+}
+
+#caja-formulario input[type="submit"]:hover {
+    background-color: var(--color-accent-dark, #6b5617);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+#caja-formulario input[type="reset"] {
+    background-color: #666;
+}
+
+#caja-formulario input[type="reset"]:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+#caja-formulario .button-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Media Queries - Tablet */
+@media (max-width: 992px) {
+    #caja-formulario {
+        padding: var(--spacing-md);
+    }
+
+    #caja-formulario form {
+        max-width: 100%;
+    }
+}
+
+/* Media Queries - Mobile */
+@media (max-width: 768px) {
+    #caja-formulario {
+        margin: var(--spacing-sm) auto;
+        padding: var(--spacing-md);
+        min-height: auto;
+    }
+
+    #caja-formulario h1 {
+        font-size: var(--font-size-h2);
+        margin-bottom: var(--spacing-md);
+    }
+
+    #caja-formulario form {
+        gap: var(--spacing-sm);
+    }
+
+    #caja-formulario .button-group {
+        flex-direction: column;
+    }
+
+    #caja-formulario input[type="submit"],
+    #caja-formulario input[type="reset"] {
+        width: 100%;
+    }
+}
+
+/* Media Queries - Mobile pequeño */
+@media (max-width: 480px) {
+    #caja-formulario {
+        padding: var(--spacing-sm);
+    }
+
+    #caja-formulario h1 {
+        font-size: var(--font-size-h3);
+    }
+}

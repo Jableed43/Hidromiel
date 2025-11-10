@@ -1,0 +1,61 @@
+/* Variables CSS - Sistema de diseño */
+:root {
+    /* Colores principales */
+    --color-primary: #F9C941;
+    --color-primary-dark: #fcba03;
+    --color-secondary: #FFD661;
+    --color-tertiary: #FFE69E;
+    --color-accent: #8A6E1D;
+    --color-accent-light: rgb(191, 137, 38);
+    
+    /* Colores de texto */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #808080;
+    --color-text-dark: #000000;
+    
+    /* Colores de fondo */
+    --bg-primary: #F9C941;
+    --bg-secondary: rgb(191, 137, 38);
+    --bg-dark: #000000;
+    
+    /* Tipografía */
+    --font-primary: 'TheValentine', serif;
+    --font-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    
+    /* Tamaños de fuente */
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-large: 24px;
+    --font-size-xl: 27px;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Breakpoints */
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    
+    /* Anchos máximos */
+    --max-width-container: 1200px;
+    --max-width-content: 960px;
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.4s ease;
+    --transition-slow: 0.6s ease;
+    
+    /* Sombras */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+

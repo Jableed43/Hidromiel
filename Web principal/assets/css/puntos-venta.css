@@ -1,0 +1,88 @@
+/* Importar variables */
+@import url('variables.css');
+
+.puntos-venta {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.puntos-venta h1.puntoVenta {
+    text-align: center;
+    background-color: var(--color-accent-light);
+    font-size: var(--font-size-h1);
+    color: var(--color-text-primary);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    border-radius: 8px;
+}
+
+.puntos-venta #caja-mapa {
+    width: 100%;
+    background-color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.puntos-venta iframe#main-map {
+    width: 100%;
+    height: 600px;
+    border: 0;
+    display: block;
+}
+
+.puntos-venta aside {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.puntos-venta .imagen-aside {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Media Queries - Tablet */
+@media (max-width: 992px) {
+    .puntos-venta {
+        padding: var(--spacing-sm);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 500px;
+    }
+}
+
+/* Media Queries - Mobile */
+@media (max-width: 768px) {
+    .puntos-venta h1.puntoVenta {
+        font-size: var(--font-size-h2);
+        padding: var(--spacing-sm);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 400px;
+    }
+}
+
+/* Media Queries - Mobile pequeño */
+@media (max-width: 480px) {
+    .puntos-venta {
+        padding: var(--spacing-xs);
+    }
+
+    .puntos-venta h1.puntoVenta {
+        font-size: var(--font-size-h3);
+    }
+
+    .puntos-venta iframe#main-map {
+        height: 300px;
+    }
+}

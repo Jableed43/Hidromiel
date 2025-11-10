@@ -1,0 +1,54 @@
+/* Importar variables */
+@import url('variables.css');
+
+main.quienes-somos {
+    width: 100%;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.img-container-quienes-somos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.img-container-quienes-somos img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Media Queries - Tablet */
+@media (max-width: 992px) {
+    main.quienes-somos {
+        padding: var(--spacing-sm);
+    }
+}
+
+/* Media Queries - Mobile */
+@media (max-width: 768px) {
+    main.quienes-somos {
+        padding: var(--spacing-sm);
+    }
+
+    .img-container-quienes-somos img {
+        max-width: 100%;
+    }
+}
+
+/* Media Queries - Mobile pequeño */
+@media (max-width: 480px) {
+    main.quienes-somos {
+        padding: var(--spacing-xs);
+    }
+}
