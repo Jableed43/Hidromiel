@@ -1,0 +1,564 @@
+/* Importar variables */
+@import url('variables.css');
+
+/* ============================================
+   MEJORAS VISUALES AVANZADAS
+   ============================================ */
+
+/* ============================================
+   ANIMACIONES DE ENTRADA AL SCROLL
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Clases para animaciones de entrada */
+.fade-in-up {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.slide-in-left {
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+    opacity: 0;
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Delays escalonados para elementos en grid */
+.fade-in-up:nth-child(1) { animation-delay: 0.1s; }
+.fade-in-up:nth-child(2) { animation-delay: 0.2s; }
+.fade-in-up:nth-child(3) { animation-delay: 0.3s; }
+.fade-in-up:nth-child(4) { animation-delay: 0.4s; }
+
+/* ============================================
+   EFECTOS HOVER MEJORADOS PARA CARDS
+   ============================================ */
+
+.beneficio-card,
+.valor-card,
+.tip-card,
+.info-card {
+    position: relative;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.beneficio-card::before,
+.valor-card::before,
+.tip-card::before,
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: 1;
+}
+
+.beneficio-card:hover::before,
+.valor-card:hover::before,
+.tip-card:hover::before,
+.info-card:hover::before {
+    left: 100%;
+}
+
+.beneficio-card:hover,
+.valor-card:hover,
+.tip-card:hover,
+.info-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(138, 110, 29, 0.25), 0 0 0 1px rgba(138, 110, 29, 0.1);
+}
+
+.beneficio-card i,
+.valor-card i {
+    transition: all var(--transition-normal);
+}
+
+.beneficio-card:hover i,
+.valor-card:hover i {
+    transform: scale(1.15) rotate(5deg);
+    color: var(--color-accent);
+    filter: drop-shadow(0 4px 8px rgba(138, 110, 29, 0.3));
+}
+
+/* ============================================
+   GRADIENTES Y EFECTOS DE PROFUNDIDAD
+   ============================================ */
+
+/* Mejora en hero section */
+.hero-overlay {
+    position: relative;
+}
+
+.hero-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 20% 50%, rgba(138, 110, 29, 0.4) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(249, 201, 65, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Efecto de profundidad en secciones */
+.historia-section-full,
+.beneficios-section-full,
+.nosotros-section-full,
+.puntos-venta-section-full,
+.contacto-section-full {
+    position: relative;
+}
+
+.historia-section-full::before,
+.beneficios-section-full::before,
+.nosotros-section-full::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, 
+        var(--color-primary) 0%, 
+        var(--color-secondary) 25%,
+        var(--color-tertiary) 50%,
+        var(--color-secondary) 75%,
+        var(--color-primary) 100%);
+    border-radius: 14px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity var(--transition-slow);
+}
+
+.historia-section-full:hover::before,
+.beneficios-section-full:hover::before,
+.nosotros-section-full:hover::before {
+    opacity: 0.1;
+}
+
+/* ============================================
+   BOTONES Y CTAs MEJORADOS
+   ============================================ */
+
+.hero-cta,
+.button-add,
+.cta-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-cta::before,
+.button-add::before,
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.hero-cta:hover::before,
+.button-add:hover::before,
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.hero-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.hero-cta:hover::after {
+    left: 100%;
+}
+
+.hero-cta:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(138, 110, 29, 0.4), 0 0 20px rgba(249, 201, 65, 0.3);
+}
+
+.button-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   EFECTOS TIPOGRÁFICOS MEJORADOS
+   ============================================ */
+
+.section-title {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-primary));
+    transition: width var(--transition-slow);
+    border-radius: 2px;
+}
+
+.section-title:hover::after {
+    width: 80%;
+}
+
+/* Estilos de hero-title movidos a onepage.css para mejor control */
+/* El texto debe ser visible con color blanco sólido, no transparente */
+
+/* ============================================
+   ELEMENTOS DECORATIVOS
+   ============================================ */
+
+/* Partículas decorativas en fondos */
+.beneficios-section-full::after,
+.nosotros-section-full::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(249, 201, 65, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(138, 110, 29, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 214, 97, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+/* Formas geométricas decorativas */
+.historia-section-full {
+    position: relative;
+}
+
+.historia-section-full::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: -1;
+    filter: blur(20px);
+}
+
+/* ============================================
+   EFECTOS DE PARALLAX SUTIL
+   ============================================ */
+
+.proceso-background {
+    will-change: transform;
+}
+
+/* ============================================
+   MEJORAS EN PRODUCTOS
+   ============================================ */
+
+.productos .product-container {
+    position: relative;
+}
+
+.productos .product-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.productos .product-container:hover::after {
+    opacity: 1;
+}
+
+.productos .product-container:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(138, 110, 29, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   MEJORAS EN HEADER
+   ============================================ */
+
+header {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: box-shadow var(--transition-normal);
+}
+
+header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    opacity: 0.3;
+}
+
+/* ============================================
+   EFECTOS EN IMÁGENES
+   ============================================ */
+
+.historia-image img,
+.historia-media video {
+    transition: transform var(--transition-slow);
+}
+
+.historia-image:hover img,
+.historia-media:hover video {
+    transform: scale(1.05);
+}
+
+.historia-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(138, 110, 29, 0.2) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.historia-image:hover::after {
+    opacity: 1;
+}
+
+/* ============================================
+   ANIMACIONES DE ICONOS
+   ============================================ */
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.beneficio-card i,
+.valor-card i {
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.beneficio-card:hover i,
+.valor-card:hover i {
+    animation: none;
+}
+
+/* ============================================
+   EFECTOS DE BRILLO EN BORDES
+   ============================================ */
+
+.beneficio-card,
+.valor-card,
+.tip-card,
+.info-card {
+    position: relative;
+}
+
+.beneficio-card::after,
+.valor-card::after,
+.tip-card::after,
+.info-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent), var(--color-primary));
+    border-radius: 14px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity var(--transition-normal);
+    filter: blur(4px);
+}
+
+.beneficio-card:hover::after,
+.valor-card:hover::after,
+.tip-card:hover::after,
+.info-card:hover::after {
+    opacity: 0.3;
+}
+
+/* ============================================
+   MEJORAS EN FORMULARIOS
+   ============================================ */
+
+#caja-formulario input[type="text"],
+#caja-formulario input[type="email"],
+#caja-formulario select,
+#caja-formulario textarea {
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+#caja-formulario input[type="text"]:focus,
+#caja-formulario input[type="email"]:focus,
+#caja-formulario select:focus,
+#caja-formulario textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(138, 110, 29, 0.15), 0 0 0 3px rgba(138, 110, 29, 0.1);
+    border-color: var(--color-accent);
+}
+
+/* ============================================
+   EFECTOS DE SCROLL SMOOTH MEJORADOS
+   ============================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   MEJORAS EN FOOTER
+   ============================================ */
+
+footer {
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-accent), var(--color-primary), transparent);
+}
+
+.RedesSociales a {
+    position: relative;
+    overflow: hidden;
+}
+
+.RedesSociales a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+}
+
+.RedesSociales a:hover::before {
+    width: 100px;
+    height: 100px;
+}
+

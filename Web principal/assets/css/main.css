@@ -367,6 +367,8 @@ section#contenido_principal {
     pointer-events: none;
 }
 
+/* Estilos de hero movidos a onepage.css para evitar conflictos */
+/*
 .hero-title {
     font-size: 3.5rem;
     font-weight: bold;
@@ -393,6 +395,7 @@ section#contenido_principal {
     position: relative;
     z-index: 1;
 }
+*/
 
 .tipografia_presentacion {
     color: var(--color-text-default);
@@ -516,12 +519,15 @@ section#contenido_principal {
 .proceso-overlay h2 {
     margin-bottom: var(--spacing-md);
     font-size: var(--font-size-h2);
+    color: var(--color-text-default);
+    opacity: 1;
 }
 
 .proceso-overlay p {
     font-size: var(--font-size-large);
     line-height: 1.8;
     color: var(--color-text-default);
+    opacity: 1;
 }
 
 /* Footer */

@@ -81,14 +81,14 @@
         <main>
             <!-- HERO SECTION -->
             <section id="hero" class="hero-section-full">
-                <div class="hero-background">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content">
-                        <h1 class="hero-title">El Elixir de los Dioses</h1>
-                        <p class="hero-subtitle">La primera bebida que la humanidad conoció</p>
-                        <p class="hero-description">Imagina beber de la misma copa que los vikingos, los griegos y los mayas. El hidromiel no es solo una bebida: es un viaje a través del tiempo, un legado ancestral que hemos rescatado para ti. Cada sorbo es un encuentro con la historia, cada botella, una obra de arte artesanal.</p>
-                        <a href="#productos" class="hero-cta">Descubre Nuestros Productos</a>
-                    </div>
+                <div class="hero-background"></div>
+                <div class="hero-overlay"></div>
+                <img src="assets/img/abeja-volando.gif" alt="Abeja volando" class="hero-bee" />
+                <div class="hero-content">
+                    <h1 class="hero-title">El Elixir de los Dioses</h1>
+                    <p class="hero-subtitle">La primera bebida que la humanidad conoció</p>
+                    <p class="hero-description">Un legado ancestral rescatado para tu mesa. Cada botella es historia, tradición y arte artesanal en cada sorbo.</p>
+                    <a href="#productos" class="hero-cta">Descubre Nuestros Productos</a>
                 </div>
             </section>
 
@@ -110,10 +110,11 @@
 
             <!-- PROCESO SECTION -->
             <section id="proceso" class="proceso-section-full">
-                <div class="proceso-background">
-                    <div class="proceso-overlay">
-                        <h2 class="section-title">Elaborado con Pasión y Tiempo</h2>
-                        <p>En cada gota de nuestro hidromiel hay horas de cuidado, días de fermentación paciente y el amor de quienes creemos que las cosas bien hechas valen la pena. No hay prisa, solo dedicación. No hay atajos, solo tradición.</p>
+                <div class="proceso-background"></div>
+                <div class="proceso-overlay-wrapper">
+                    <div class="proceso-overlay" style="background: #ffffff !important; color: #000000 !important; opacity: 1 !important; filter: none !important; mix-blend-mode: normal !important;">
+                        <h2 class="section-title" style="color: #000000 !important; opacity: 1 !important; font-weight: 700 !important; filter: none !important;">Elaborado con Pasión y Tiempo</h2>
+                        <p style="color: #000000 !important; opacity: 1 !important; font-weight: 400 !important; filter: none !important;">En cada gota de nuestro hidromiel hay horas de cuidado, días de fermentación paciente y el amor de quienes creemos que las cosas bien hechas valen la pena. No hay prisa, solo dedicación. No hay atajos, solo tradición.</p>
                     </div>
                 </div>
             </section>
@@ -233,20 +234,22 @@
                 </div>
                 <div class="nosotros-historia">
                     <div class="historia-content">
+                        <div class="historia-image">
+                            <img src="assets/img/fabrica.jpeg" alt="Nuestra fábrica de hidromiel artesanal - Proceso de elaboración tradicional" loading="lazy">
+                        </div>
                         <div class="historia-text">
                             <h3>Nuestra Historia</h3>
                             <p>Todo comenzó con una pregunta: ¿qué pasaría si rescatáramos la bebida más antigua de la humanidad y la hiciéramos con el mismo amor que nuestros ancestros?</p>
                             <p>Somos un grupo de apasionados que decidimos que el tiempo no debía olvidar esta joya dorada. Cada mañana, cuando el sol ilumina nuestros barriles, recordamos que no estamos solo fermentando miel y agua. Estamos preservando magia.</p>
                             <p>En cada botella hay horas de observación paciente, días de espera respetuosa, y el compromiso inquebrantable de hacer las cosas bien, sin atajos, sin prisas. Porque el hidromiel, como el amor, necesita tiempo para florecer.</p>
                         </div>
-                        <div class="historia-image">
-                            <img src="assets/img/fabrica.jpeg" alt="Nuestra fábrica de hidromiel artesanal - Proceso de elaboración tradicional" loading="lazy">
-                        </div>
                     </div>
                 </div>
                 <div class="nosotros-valores">
-                    <h3 class="valores-title">Lo que Nos Mueve</h3>
-                    <div class="valores-grid">
+                    <div class="valores-container">
+                        <h2 class="section-title">Lo que Nos Mueve</h2>
+                        <p class="valores-intro">Detrás de cada botella hay más que un proceso: hay valores que guían cada decisión, cada paso, cada momento de cuidado. Estos principios no son solo palabras, son la esencia de lo que hacemos y por qué lo hacemos.</p>
+                        <div class="valores-grid">
                         <div class="valor-card">
                             <i class="fas fa-heart fa-3x"></i>
                             <h4>Pasión</h4>
@@ -474,5 +477,6 @@
     <script src="assets/js/productos.js"></script>
     <script src="assets/js/formulario.js"></script>
     <script src="assets/js/onepage.js"></script>
+    <script src="assets/js/animations.js"></script>
 </body>
 </html>

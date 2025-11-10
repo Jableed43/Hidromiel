@@ -20,6 +20,9 @@
 @import url('puntos-venta.css');
 @import url('carrito.css');
 
-/* 5. Responsive al final */
+/* 5. Mejoras visuales avanzadas */
+@import url('enhancements.css');
+
+/* 6. Responsive al final */
 @import url('responsive.css');
 
